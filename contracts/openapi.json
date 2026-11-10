@@ -1,0 +1,3142 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "ずらしたび API",
+    "description": "v3 contract with authenticated trip, proposal, intent and selection services.",
+    "version": "3.0.0"
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HealthResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/spots": {
+      "get": {
+        "summary": "List Spots",
+        "operationId": "listSpots",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "area_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Area Id"
+            }
+          },
+          {
+            "name": "visit_date",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "date",
+              "title": "Visit Date"
+            }
+          },
+          {
+            "name": "locale",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "ja",
+                "en"
+              ],
+              "type": "string",
+              "title": "Locale"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Q"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SpotListResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        }
+      }
+    },
+    "/api/v1/intent/interpret": {
+      "post": {
+        "summary": "Interpret Intent",
+        "operationId": "interpretIntent",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/IntentInterpretRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IntentDraftResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/trips": {
+      "post": {
+        "summary": "Create Trip",
+        "operationId": "createTrip",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TripCreateRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Conflict",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Unprocessable Content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too Many Requests",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service Unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          },
+          "504": {
+            "description": "Gateway Timeout",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ]
+      }
+    },
+    "/api/v1/trips/{trip_id}": {
+      "get": {
+        "summary": "Get Trip",
+        "operationId": "getTrip",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "trip_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Trip Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TripResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        }
+      }
+    },
+    "/api/v1/trips/{trip_id}/proposals": {
+      "post": {
+        "summary": "Create Proposal",
+        "operationId": "createProposal",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "trip_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Trip Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProposalRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalBundle"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        }
+      }
+    },
+    "/api/v1/trips/{trip_id}/proposals/{proposal_id}": {
+      "get": {
+        "summary": "Get Proposal",
+        "operationId": "getProposal",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "trip_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Trip Id"
+            }
+          },
+          {
+            "name": "proposal_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Proposal Id"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProposalBundle"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        }
+      }
+    },
+    "/api/v1/trips/{trip_id}/proposals/{proposal_id}/selection": {
+      "post": {
+        "summary": "Select Plan",
+        "operationId": "selectPlan",
+        "security": [
+          {
+            "FirebaseBearer": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "trip_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Trip Id"
+            }
+          },
+          {
+            "name": "proposal_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9_-]+$",
+              "title": "Proposal Id"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SelectionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SelectionResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unauthorized"
+          },
+          "404": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Not Found"
+          },
+          "409": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Conflict"
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Unprocessable Content"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Too Many Requests"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Internal Server Error"
+          },
+          "503": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Service Unavailable"
+          },
+          "504": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            },
+            "description": "Gateway Timeout"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActiveSelection": {
+        "properties": {
+          "proposal_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Proposal Id"
+          },
+          "plan_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Plan Id"
+          },
+          "selected_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Selected At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "proposal_id",
+          "plan_id",
+          "selected_at"
+        ],
+        "title": "ActiveSelection"
+      },
+      "AvoidWindow": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Spot Id"
+          },
+          "starts_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Starts At"
+          },
+          "ends_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Ends At"
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "user_preference",
+              "curated_guidance",
+              "demo_assumption"
+            ],
+            "title": "Basis"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000,
+            "title": "Note",
+            "default": ""
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "spot_id",
+          "starts_at",
+          "ends_at",
+          "basis"
+        ],
+        "title": "AvoidWindow"
+      },
+      "ConstraintOverrides": {
+        "properties": {
+          "max_walk_meters": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 30000.0,
+                "minimum": 100.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Walk Meters"
+          },
+          "interests": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "history",
+                    "photography",
+                    "nature",
+                    "food",
+                    "art",
+                    "quiet"
+                  ]
+                },
+                "type": "array",
+                "maxItems": 6,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interests"
+          },
+          "end_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End At"
+          },
+          "avoid_windows": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/AvoidWindow"
+                },
+                "type": "array",
+                "maxItems": 6
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avoid Windows"
+          },
+          "wait_assumptions": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/WaitAssumption"
+                },
+                "type": "array",
+                "maxItems": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wait Assumptions"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "ja",
+                  "en"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "ConstraintOverrides"
+      },
+      "ErrorBody": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "details": {
+            "items": {
+              "$ref": "#/components/schemas/ErrorDetail"
+            },
+            "type": "array",
+            "title": "Details"
+          },
+          "request_id": {
+            "type": "string",
+            "title": "Request Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "details",
+          "request_id"
+        ],
+        "title": "ErrorBody"
+      },
+      "ErrorDetail": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "title": "Code"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "field": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Field"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "message",
+          "field"
+        ],
+        "title": "ErrorDetail"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/ErrorBody"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "title": "ErrorResponse"
+      },
+      "Evidence": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "source_kind": {
+            "type": "string",
+            "enum": [
+              "measured",
+              "estimated",
+              "curated",
+              "user_observed",
+              "user_assumption",
+              "user_preference",
+              "demo",
+              "unknown"
+            ],
+            "title": "Source Kind"
+          },
+          "provider": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "title": "Provider"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Title"
+          },
+          "source_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Source Url"
+          },
+          "checked_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Checked At"
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "high",
+              "medium",
+              "low",
+              "unknown"
+            ],
+            "title": "Confidence"
+          },
+          "is_demo": {
+            "type": "boolean",
+            "title": "Is Demo"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000,
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "source_kind",
+          "provider",
+          "title",
+          "source_url",
+          "checked_at",
+          "confidence",
+          "is_demo",
+          "note"
+        ],
+        "title": "Evidence"
+      },
+      "Explanation": {
+        "properties": {
+          "summary": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Summary"
+          },
+          "reason_fact_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Reason Fact Ids"
+          },
+          "tradeoff_fact_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Tradeoff Fact Ids"
+          },
+          "uncertainty_fact_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Uncertainty Fact Ids"
+          },
+          "generation_mode": {
+            "type": "string",
+            "enum": [
+              "gemini",
+              "template"
+            ],
+            "title": "Generation Mode"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "summary",
+          "reason_fact_ids",
+          "tradeoff_fact_ids",
+          "uncertainty_fact_ids",
+          "generation_mode"
+        ],
+        "title": "Explanation"
+      },
+      "Fact": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "change",
+              "interest",
+              "travel",
+              "timing",
+              "opening",
+              "tradeoff",
+              "uncertainty"
+            ],
+            "title": "Kind"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Text"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          },
+          "is_demo": {
+            "type": "boolean",
+            "title": "Is Demo"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "text",
+          "evidence_ids",
+          "is_demo"
+        ],
+        "title": "Fact"
+      },
+      "FieldNote": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "title": "Field"
+          },
+          "source_quote": {
+            "type": "string",
+            "title": "Source Quote"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "field",
+          "source_quote"
+        ],
+        "title": "FieldNote"
+      },
+      "HealthResponse": {
+        "properties": {
+          "status": {
+            "type": "string",
+            "const": "ok",
+            "title": "Status",
+            "default": "ok"
+          },
+          "contract_version": {
+            "type": "string",
+            "const": "3.0.0",
+            "title": "Contract Version",
+            "default": "3.0.0"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "HealthResponse"
+      },
+      "IntentDraft": {
+        "properties": {
+          "interests": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "history",
+                    "photography",
+                    "nature",
+                    "food",
+                    "art",
+                    "quiet"
+                  ]
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interests"
+          },
+          "requested_stops": {
+            "items": {
+              "$ref": "#/components/schemas/RequestedStop"
+            },
+            "type": "array",
+            "title": "Requested Stops"
+          },
+          "max_walk_meters": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 30000.0,
+                "minimum": 100.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Walk Meters"
+          },
+          "end_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End At"
+          },
+          "avoid_windows": {
+            "items": {
+              "$ref": "#/components/schemas/AvoidWindow"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Avoid Windows"
+          },
+          "wait_assumptions": {
+            "items": {
+              "$ref": "#/components/schemas/WaitAssumption"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Wait Assumptions"
+          },
+          "field_notes": {
+            "items": {
+              "$ref": "#/components/schemas/FieldNote"
+            },
+            "type": "array",
+            "title": "Field Notes"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "interests",
+          "requested_stops",
+          "max_walk_meters",
+          "end_at",
+          "avoid_windows",
+          "wait_assumptions",
+          "field_notes"
+        ],
+        "title": "IntentDraft"
+      },
+      "IntentDraftResponse": {
+        "properties": {
+          "draft": {
+            "$ref": "#/components/schemas/IntentDraft"
+          },
+          "unresolved": {
+            "items": {
+              "$ref": "#/components/schemas/UnresolvedField"
+            },
+            "type": "array",
+            "title": "Unresolved"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "generation_mode": {
+            "type": "string",
+            "enum": [
+              "gemini",
+              "template"
+            ],
+            "title": "Generation Mode"
+          },
+          "requires_confirmation": {
+            "type": "boolean",
+            "const": true,
+            "title": "Requires Confirmation"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "draft",
+          "unresolved",
+          "warnings",
+          "generation_mode",
+          "requires_confirmation"
+        ],
+        "title": "IntentDraftResponse"
+      },
+      "IntentInterpretRequest": {
+        "properties": {
+          "client_request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Client Request Id"
+          },
+          "area_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Area Id"
+          },
+          "visit_date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "title": "Visit Date"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ja",
+              "en"
+            ],
+            "title": "Locale"
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Text"
+          },
+          "current_input": {
+            "$ref": "#/components/schemas/PartialTripInput"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "client_request_id",
+          "area_id",
+          "visit_date",
+          "locale",
+          "text",
+          "current_input"
+        ],
+        "title": "IntentInterpretRequest"
+      },
+      "Leg": {
+        "properties": {
+          "from_stop_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "From Stop Id"
+          },
+          "to_stop_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "To Stop Id"
+          },
+          "mode": {
+            "type": "string",
+            "const": "walking",
+            "title": "Mode"
+          },
+          "duration_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Duration Seconds"
+          },
+          "buffer_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Buffer Seconds"
+          },
+          "distance_meters": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Distance Meters"
+          },
+          "source_kind": {
+            "type": "string",
+            "enum": [
+              "measured",
+              "estimated",
+              "curated",
+              "user_observed",
+              "user_assumption",
+              "user_preference",
+              "demo",
+              "unknown"
+            ],
+            "title": "Source Kind"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "from_stop_id",
+          "to_stop_id",
+          "mode",
+          "duration_seconds",
+          "buffer_seconds",
+          "distance_meters",
+          "source_kind",
+          "evidence_ids"
+        ],
+        "title": "Leg"
+      },
+      "Location": {
+        "properties": {
+          "lat": {
+            "type": "number",
+            "maximum": 90.0,
+            "minimum": -90.0,
+            "title": "Lat"
+          },
+          "lng": {
+            "type": "number",
+            "maximum": 180.0,
+            "minimum": -180.0,
+            "title": "Lng"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "lat",
+          "lng"
+        ],
+        "title": "Location"
+      },
+      "Metrics": {
+        "properties": {
+          "walk_meters": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Walk Meters"
+          },
+          "travel_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Travel Seconds"
+          },
+          "total_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Total Seconds"
+          },
+          "finish_slack_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Finish Slack Seconds"
+          },
+          "modeled_queue_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Modeled Queue Seconds"
+          },
+          "schedule_wait_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Schedule Wait Seconds"
+          },
+          "avoid_overlap_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Avoid Overlap Seconds"
+          },
+          "optional_kept_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Optional Kept Count"
+          },
+          "optional_replaced_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Optional Replaced Count"
+          },
+          "optional_removed_count": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Optional Removed Count"
+          },
+          "wait_not_included_spot_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Wait Not Included Spot Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "walk_meters",
+          "travel_seconds",
+          "total_seconds",
+          "finish_slack_seconds",
+          "modeled_queue_seconds",
+          "schedule_wait_seconds",
+          "avoid_overlap_seconds",
+          "optional_kept_count",
+          "optional_replaced_count",
+          "optional_removed_count",
+          "wait_not_included_spot_ids"
+        ],
+        "title": "Metrics"
+      },
+      "OpeningWindow": {
+        "properties": {
+          "opens_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Opens At"
+          },
+          "closes_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Closes At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "opens_at",
+          "closes_at"
+        ],
+        "title": "OpeningWindow"
+      },
+      "PartialConstraints": {
+        "properties": {
+          "area_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Id"
+          },
+          "timezone": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "Asia/Tokyo"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Timezone"
+          },
+          "start_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start At"
+          },
+          "end_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End At"
+          },
+          "start_spot_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Spot Id"
+          },
+          "end_spot_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Spot Id"
+          },
+          "mode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "walking"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mode"
+          },
+          "max_walk_meters": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 30000.0,
+                "minimum": 100.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Walk Meters"
+          },
+          "max_visits": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 6.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Visits"
+          },
+          "interests": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "history",
+                    "photography",
+                    "nature",
+                    "food",
+                    "art",
+                    "quiet"
+                  ]
+                },
+                "type": "array",
+                "maxItems": 6,
+                "minItems": 1
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Interests"
+          },
+          "party_size": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 10.0,
+                "minimum": 1.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Party Size"
+          },
+          "locale": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "ja",
+                  "en"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locale"
+          },
+          "avoid_windows": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/AvoidWindow"
+                },
+                "type": "array",
+                "maxItems": 6
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avoid Windows"
+          },
+          "wait_assumptions": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/WaitAssumption"
+                },
+                "type": "array",
+                "maxItems": 2
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wait Assumptions"
+          },
+          "omakase_visits": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "maximum": 3.0,
+                "minimum": 0.0
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Omakase Visits"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "PartialConstraints"
+      },
+      "PartialTripInput": {
+        "properties": {
+          "constraints": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/PartialConstraints"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "requested_stops": {
+            "anyOf": [
+              {
+                "items": {
+                  "$ref": "#/components/schemas/RequestedStop"
+                },
+                "type": "array",
+                "maxItems": 6
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Requested Stops"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "PartialTripInput"
+      },
+      "Plan": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "strategy": {
+            "type": "string",
+            "enum": [
+              "baseline",
+              "time_shift",
+              "place_shift"
+            ],
+            "title": "Strategy"
+          },
+          "stops": {
+            "items": {
+              "$ref": "#/components/schemas/Stop"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "minItems": 3,
+            "title": "Stops"
+          },
+          "legs": {
+            "items": {
+              "$ref": "#/components/schemas/Leg"
+            },
+            "type": "array",
+            "maxItems": 7,
+            "minItems": 2,
+            "title": "Legs"
+          },
+          "metrics": {
+            "$ref": "#/components/schemas/Metrics"
+          },
+          "facts": {
+            "items": {
+              "$ref": "#/components/schemas/Fact"
+            },
+            "type": "array",
+            "title": "Facts"
+          },
+          "explanation": {
+            "$ref": "#/components/schemas/Explanation"
+          },
+          "changes": {
+            "items": {
+              "$ref": "#/components/schemas/PlanChange"
+            },
+            "type": "array",
+            "title": "Changes"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "strategy",
+          "stops",
+          "legs",
+          "metrics",
+          "facts",
+          "explanation",
+          "changes",
+          "warnings"
+        ],
+        "title": "Plan"
+      },
+      "PlanChange": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "time_shift",
+              "place_replacement",
+              "removal"
+            ],
+            "title": "Kind"
+          },
+          "original_spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Original Spot Id"
+          },
+          "replacement_spot_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Replacement Spot Id"
+          },
+          "before_start_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Before Start At"
+          },
+          "after_start_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "After Start At"
+          },
+          "reason_fact_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Reason Fact Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind",
+          "original_spot_id",
+          "replacement_spot_id",
+          "before_start_at",
+          "after_start_at",
+          "reason_fact_ids"
+        ],
+        "title": "PlanChange"
+      },
+      "ProposalBundle": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "trip_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Trip Id"
+          },
+          "base_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Base Version"
+          },
+          "request": {
+            "$ref": "#/components/schemas/ProposalRequest"
+          },
+          "effective_constraints": {
+            "$ref": "#/components/schemas/TripConstraints"
+          },
+          "baseline": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Plan"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "alternatives": {
+            "items": {
+              "$ref": "#/components/schemas/Plan"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Alternatives"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "complete",
+              "partial",
+              "no_feasible_plan"
+            ],
+            "title": "Status"
+          },
+          "violations": {
+            "items": {
+              "$ref": "#/components/schemas/Violation"
+            },
+            "type": "array",
+            "title": "Violations"
+          },
+          "warnings": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Warnings"
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "trip_id",
+          "base_version",
+          "request",
+          "effective_constraints",
+          "baseline",
+          "alternatives",
+          "evidence",
+          "status",
+          "violations",
+          "warnings",
+          "created_at"
+        ],
+        "title": "ProposalBundle"
+      },
+      "ProposalRequest": {
+        "properties": {
+          "client_request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Client Request Id"
+          },
+          "base_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Base Version"
+          },
+          "mode": {
+            "type": "string",
+            "enum": [
+              "initial",
+              "refine"
+            ],
+            "title": "Mode"
+          },
+          "constraint_overrides": {
+            "$ref": "#/components/schemas/ConstraintOverrides"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "client_request_id",
+          "base_version",
+          "mode"
+        ],
+        "title": "ProposalRequest"
+      },
+      "RequestedStop": {
+        "properties": {
+          "spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Spot Id"
+          },
+          "requirement": {
+            "type": "string",
+            "enum": [
+              "must",
+              "optional"
+            ],
+            "title": "Requirement"
+          },
+          "locked_start_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locked Start At"
+          },
+          "reservation_confirmed": {
+            "type": "boolean",
+            "title": "Reservation Confirmed",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "spot_id",
+          "requirement"
+        ],
+        "title": "RequestedStop"
+      },
+      "SelectionRequest": {
+        "properties": {
+          "plan_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Plan Id"
+          },
+          "expected_version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Expected Version"
+          },
+          "idempotency_key": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Idempotency Key"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "plan_id",
+          "expected_version",
+          "idempotency_key"
+        ],
+        "title": "SelectionRequest"
+      },
+      "SelectionResponse": {
+        "properties": {
+          "trip": {
+            "$ref": "#/components/schemas/Trip"
+          },
+          "active_plan": {
+            "$ref": "#/components/schemas/Plan"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "trip",
+          "active_plan",
+          "evidence"
+        ],
+        "title": "SelectionResponse"
+      },
+      "Spot": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "area_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Area Id"
+          },
+          "google_place_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Google Place Id"
+          },
+          "name_ja": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Name Ja"
+          },
+          "name_en": {
+            "type": "string",
+            "maxLength": 200,
+            "minLength": 1,
+            "title": "Name En"
+          },
+          "description_ja": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Description Ja"
+          },
+          "description_en": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Description En"
+          },
+          "visitor_info_ja": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Visitor Info Ja"
+          },
+          "visitor_info_en": {
+            "type": "string",
+            "maxLength": 2000,
+            "minLength": 1,
+            "title": "Visitor Info En"
+          },
+          "reservation_required": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reservation Required"
+          },
+          "location": {
+            "$ref": "#/components/schemas/Location"
+          },
+          "tags": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "history",
+                "photography",
+                "nature",
+                "food",
+                "art",
+                "quiet"
+              ]
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Tags"
+          },
+          "stay_seconds": {
+            "type": "integer",
+            "maximum": 14400.0,
+            "minimum": 0.0,
+            "title": "Stay Seconds"
+          },
+          "opening_status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "closed",
+              "unknown"
+            ],
+            "title": "Opening Status"
+          },
+          "opening_windows": {
+            "items": {
+              "$ref": "#/components/schemas/OpeningWindow"
+            },
+            "type": "array",
+            "maxItems": 8,
+            "title": "Opening Windows"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          },
+          "is_demo": {
+            "type": "boolean",
+            "title": "Is Demo"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "area_id",
+          "google_place_id",
+          "name_ja",
+          "name_en",
+          "description_ja",
+          "description_en",
+          "visitor_info_ja",
+          "visitor_info_en",
+          "reservation_required",
+          "location",
+          "tags",
+          "stay_seconds",
+          "opening_status",
+          "opening_windows",
+          "evidence_ids",
+          "is_demo"
+        ],
+        "title": "Spot"
+      },
+      "SpotListResponse": {
+        "properties": {
+          "items": {
+            "items": {
+              "$ref": "#/components/schemas/Spot"
+            },
+            "type": "array",
+            "maxItems": 12,
+            "title": "Items"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "items",
+          "evidence"
+        ],
+        "title": "SpotListResponse"
+      },
+      "Stop": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Spot Id"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "origin",
+              "visit",
+              "destination"
+            ],
+            "title": "Role"
+          },
+          "requirement": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "must",
+                  "optional"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Requirement"
+          },
+          "arrival_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Arrival At"
+          },
+          "start_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start At"
+          },
+          "departure_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Departure At"
+          },
+          "locked_start_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Locked Start At"
+          },
+          "opening_wait_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Opening Wait Seconds"
+          },
+          "queue_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Queue Seconds"
+          },
+          "schedule_wait_seconds": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Schedule Wait Seconds"
+          },
+          "evidence_ids": {
+            "items": {
+              "type": "string",
+              "maxLength": 128,
+              "minLength": 1,
+              "pattern": "^[A-Za-z0-9_-]+$"
+            },
+            "type": "array",
+            "title": "Evidence Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "spot_id",
+          "role",
+          "requirement",
+          "arrival_at",
+          "start_at",
+          "departure_at",
+          "locked_start_at",
+          "opening_wait_seconds",
+          "queue_seconds",
+          "schedule_wait_seconds",
+          "evidence_ids"
+        ],
+        "title": "Stop"
+      },
+      "Trip": {
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Id"
+          },
+          "constraints": {
+            "$ref": "#/components/schemas/TripConstraints"
+          },
+          "requested_stops": {
+            "items": {
+              "$ref": "#/components/schemas/RequestedStop"
+            },
+            "type": "array",
+            "title": "Requested Stops"
+          },
+          "version": {
+            "type": "integer",
+            "minimum": 1.0,
+            "title": "Version"
+          },
+          "active_selection": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/ActiveSelection"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Created At"
+          },
+          "updated_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Updated At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "id",
+          "constraints",
+          "requested_stops",
+          "version",
+          "active_selection",
+          "created_at",
+          "updated_at"
+        ],
+        "title": "Trip"
+      },
+      "TripConstraints": {
+        "properties": {
+          "area_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Area Id"
+          },
+          "timezone": {
+            "type": "string",
+            "const": "Asia/Tokyo",
+            "title": "Timezone"
+          },
+          "start_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "Start At"
+          },
+          "end_at": {
+            "type": "string",
+            "format": "date-time",
+            "title": "End At"
+          },
+          "start_spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Start Spot Id"
+          },
+          "end_spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "End Spot Id"
+          },
+          "mode": {
+            "type": "string",
+            "const": "walking",
+            "title": "Mode"
+          },
+          "max_walk_meters": {
+            "type": "integer",
+            "maximum": 30000.0,
+            "minimum": 100.0,
+            "title": "Max Walk Meters"
+          },
+          "max_visits": {
+            "type": "integer",
+            "maximum": 6.0,
+            "minimum": 1.0,
+            "title": "Max Visits"
+          },
+          "interests": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "history",
+                "photography",
+                "nature",
+                "food",
+                "art",
+                "quiet"
+              ]
+            },
+            "type": "array",
+            "maxItems": 6,
+            "minItems": 1,
+            "title": "Interests"
+          },
+          "party_size": {
+            "type": "integer",
+            "maximum": 10.0,
+            "minimum": 1.0,
+            "title": "Party Size"
+          },
+          "locale": {
+            "type": "string",
+            "enum": [
+              "ja",
+              "en"
+            ],
+            "title": "Locale"
+          },
+          "avoid_windows": {
+            "items": {
+              "$ref": "#/components/schemas/AvoidWindow"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Avoid Windows"
+          },
+          "wait_assumptions": {
+            "items": {
+              "$ref": "#/components/schemas/WaitAssumption"
+            },
+            "type": "array",
+            "maxItems": 2,
+            "title": "Wait Assumptions"
+          },
+          "omakase_visits": {
+            "type": "integer",
+            "maximum": 3.0,
+            "minimum": 0.0,
+            "title": "Omakase Visits",
+            "default": 0
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "area_id",
+          "timezone",
+          "start_at",
+          "end_at",
+          "start_spot_id",
+          "end_spot_id",
+          "mode",
+          "max_walk_meters",
+          "max_visits",
+          "interests",
+          "party_size",
+          "locale",
+          "avoid_windows",
+          "wait_assumptions"
+        ],
+        "title": "TripConstraints"
+      },
+      "TripCreateRequest": {
+        "properties": {
+          "client_request_id": {
+            "type": "string",
+            "format": "uuid",
+            "title": "Client Request Id"
+          },
+          "constraints": {
+            "$ref": "#/components/schemas/TripConstraints"
+          },
+          "requested_stops": {
+            "items": {
+              "$ref": "#/components/schemas/RequestedStop"
+            },
+            "type": "array",
+            "maxItems": 6,
+            "title": "Requested Stops"
+          },
+          "intent_confirmed": {
+            "type": "boolean",
+            "const": true,
+            "title": "Intent Confirmed"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "client_request_id",
+          "constraints",
+          "requested_stops",
+          "intent_confirmed"
+        ],
+        "title": "TripCreateRequest"
+      },
+      "TripResponse": {
+        "properties": {
+          "trip": {
+            "$ref": "#/components/schemas/Trip"
+          },
+          "active_plan": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Plan"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "trip",
+          "active_plan",
+          "evidence"
+        ],
+        "title": "TripResponse"
+      },
+      "UnresolvedField": {
+        "properties": {
+          "field": {
+            "type": "string",
+            "title": "Field"
+          },
+          "source_quote": {
+            "type": "string",
+            "title": "Source Quote"
+          },
+          "question": {
+            "type": "string",
+            "title": "Question"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "field",
+          "source_quote",
+          "question"
+        ],
+        "title": "UnresolvedField"
+      },
+      "Violation": {
+        "properties": {
+          "code": {
+            "type": "string",
+            "enum": [
+              "MUST_UNREACHABLE",
+              "CLOSED",
+              "OPENING_UNKNOWN",
+              "TIME_LIMIT",
+              "WALK_LIMIT",
+              "LOCKED_TIME",
+              "NO_CANDIDATE",
+              "ROUTE_UNKNOWN",
+              "RESERVATION_REQUIRED",
+              "CONSTRAINT_CONFLICT"
+            ],
+            "title": "Code"
+          },
+          "spot_id": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 128,
+                "minLength": 1,
+                "pattern": "^[A-Za-z0-9_-]+$"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Spot Id"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "suggested_action": {
+            "type": "string",
+            "title": "Suggested Action"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "code",
+          "spot_id",
+          "message",
+          "suggested_action"
+        ],
+        "title": "Violation"
+      },
+      "WaitAssumption": {
+        "properties": {
+          "spot_id": {
+            "type": "string",
+            "maxLength": 128,
+            "minLength": 1,
+            "pattern": "^[A-Za-z0-9_-]+$",
+            "title": "Spot Id"
+          },
+          "wait_seconds": {
+            "type": "integer",
+            "maximum": 10800.0,
+            "minimum": 0.0,
+            "title": "Wait Seconds"
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "user_observed",
+              "user_assumption",
+              "demo_assumption"
+            ],
+            "title": "Basis"
+          },
+          "observed_at": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date-time"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Observed At"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 1000,
+            "title": "Note",
+            "default": ""
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "spot_id",
+          "wait_seconds",
+          "basis"
+        ],
+        "title": "WaitAssumption"
+      }
+    },
+    "securitySchemes": {
+      "FirebaseBearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "Firebase ID token"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "note": "Walking-route endpoints for the demo area (Nagoya Castle / Sakae / Osu). IDs must match data/curated/spots.json. Coordinates are entrance or representative points chosen by the team.",
+  "points": [
+    {"id": "nagoya-castle", "name_ja": "名古屋城（正門）", "lat": 35.183615, "lng": 136.898216, "coordinate_source": "team (map check)"},
+    {"id": "meijo-park", "name_ja": "名城公園（中心点）", "lat": 35.188603, "lng": 136.901605, "coordinate_source": "OpenStreetMap"},
+    {"id": "osu-kannon", "name_ja": "大須観音", "lat": 35.159666, "lng": 136.899310, "coordinate_source": "OpenStreetMap"},
+    {"id": "banshoji", "name_ja": "万松寺", "lat": 35.159119, "lng": 136.904674, "coordinate_source": "OpenStreetMap"},
+    {"id": "atsuta-horaiken-matsuzakaya", "name_ja": "あつた蓬莱軒 松坂屋店", "lat": 35.164741, "lng": 136.907996, "coordinate_source": "team (map check)"},
+    {"id": "yabaton-yabacho", "name_ja": "矢場とん 矢場町本店", "lat": 35.161731, "lng": 136.906762, "coordinate_source": "team (map check)"},
+    {"id": "yamamotoya-honke", "name_ja": "山本屋総本家 本家", "lat": 35.165674, "lng": 136.908163, "coordinate_source": "team (map check)"},
+    {"id": "compal-osu", "name_ja": "コンパル 大須本店", "lat": 35.159434, "lng": 136.904700, "coordinate_source": "OpenStreetMap"},
+    {"id": "osu-shopping-street", "name_ja": "大須商店街（代表点）", "lat": 35.159087, "lng": 136.902500, "coordinate_source": "team (map check)"},
+    {"id": "oasis21", "name_ja": "オアシス21", "lat": 35.170848, "lng": 136.909528, "coordinate_source": "OpenStreetMap"},
+    {"id": "sunshine-sakae", "name_ja": "サンシャインサカエ", "lat": 35.169470, "lng": 136.906289, "coordinate_source": "OpenStreetMap"},
+    {"id": "sakae-station", "name_ja": "栄駅", "lat": 35.169389, "lng": 136.908610, "coordinate_source": "OpenStreetMap"}
+  ]
+}

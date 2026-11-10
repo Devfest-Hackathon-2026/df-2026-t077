@@ -1,0 +1,15 @@
+# Files NOT uploaded by `gcloud run deploy --source .` (Cloud Build then applies .dockerignore).
+# Everything git ignores (.env files, keys, credentials, node_modules, .venv, .tools) stays local.
+#!include:.gitignore
+.git/
+.github/
+.gcloudignore
+frontend/
+docs/
+tasks/
+scripts/
+tools/
+node_modules/
+firestore-debug.log
+**/.env
+**/.env.*

@@ -1,0 +1,601 @@
+{
+  "id": "demo-proposal",
+  "trip_id": "demo-trip",
+  "base_version": 1,
+  "request": {
+    "client_request_id": "00000000-0000-4000-8000-000000000001",
+    "base_version": 1,
+    "mode": "initial",
+    "constraint_overrides": {}
+  },
+  "effective_constraints": {
+    "area_id": "demo-area",
+    "timezone": "Asia/Tokyo",
+    "start_at": "2026-11-05T09:00:00+09:00",
+    "end_at": "2026-11-05T13:00:00+09:00",
+    "start_spot_id": "demo-origin",
+    "end_spot_id": "demo-origin",
+    "mode": "walking",
+    "max_walk_meters": 3000,
+    "max_visits": 3,
+    "interests": [
+      "history",
+      "quiet"
+    ],
+    "party_size": 1,
+    "locale": "en",
+    "avoid_windows": [
+      {
+        "id": "avoid-museum",
+        "spot_id": "demo-museum",
+        "starts_at": "2026-11-05T09:00:00+09:00",
+        "ends_at": "2026-11-05T10:00:00+09:00",
+        "basis": "demo_assumption",
+        "evidence_ids": [
+          "demo-evidence"
+        ],
+        "note": "demo preference, not measured crowd"
+      }
+    ],
+    "wait_assumptions": [
+      {
+        "spot_id": "demo-museum",
+        "wait_seconds": 600,
+        "basis": "demo_assumption",
+        "observed_at": null,
+        "note": "same assumption for all plans"
+      }
+    ],
+    "omakase_visits": 0
+  },
+  "baseline": {
+    "id": "plan-baseline",
+    "strategy": "baseline",
+    "stops": [
+      {
+        "id": "origin",
+        "spot_id": "demo-origin",
+        "role": "origin",
+        "requirement": null,
+        "arrival_at": "2026-11-05T09:00:00+09:00",
+        "start_at": "2026-11-05T09:00:00+09:00",
+        "departure_at": "2026-11-05T09:00:00+09:00",
+        "locked_start_at": null,
+        "opening_wait_seconds": 0,
+        "queue_seconds": 0,
+        "schedule_wait_seconds": 0,
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      },
+      {
+        "id": "stop-0",
+        "spot_id": "demo-museum",
+        "role": "visit",
+        "requirement": "must",
+        "arrival_at": "2026-11-05T09:12:00+09:00",
+        "start_at": "2026-11-05T09:22:00+09:00",
+        "departure_at": "2026-11-05T09:52:00+09:00",
+        "locked_start_at": null,
+        "opening_wait_seconds": 0,
+        "queue_seconds": 600,
+        "schedule_wait_seconds": 0,
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      },
+      {
+        "id": "stop-1",
+        "spot_id": "demo-cafe",
+        "role": "visit",
+        "requirement": "optional",
+        "arrival_at": "2026-11-05T10:04:00+09:00",
+        "start_at": "2026-11-05T10:04:00+09:00",
+        "departure_at": "2026-11-05T10:24:00+09:00",
+        "locked_start_at": null,
+        "opening_wait_seconds": 0,
+        "queue_seconds": 0,
+        "schedule_wait_seconds": 0,
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      },
+      {
+        "id": "stop-2",
+        "spot_id": "demo-origin",
+        "role": "destination",
+        "requirement": null,
+        "arrival_at": "2026-11-05T10:36:00+09:00",
+        "start_at": "2026-11-05T10:36:00+09:00",
+        "departure_at": "2026-11-05T10:36:00+09:00",
+        "locked_start_at": null,
+        "opening_wait_seconds": 0,
+        "queue_seconds": 0,
+        "schedule_wait_seconds": 0,
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      }
+    ],
+    "legs": [
+      {
+        "from_stop_id": "origin",
+        "to_stop_id": "stop-0",
+        "mode": "walking",
+        "duration_seconds": 600,
+        "buffer_seconds": 120,
+        "distance_meters": 500,
+        "source_kind": "demo",
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      },
+      {
+        "from_stop_id": "stop-0",
+        "to_stop_id": "stop-1",
+        "mode": "walking",
+        "duration_seconds": 600,
+        "buffer_seconds": 120,
+        "distance_meters": 500,
+        "source_kind": "demo",
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      },
+      {
+        "from_stop_id": "stop-1",
+        "to_stop_id": "stop-2",
+        "mode": "walking",
+        "duration_seconds": 600,
+        "buffer_seconds": 120,
+        "distance_meters": 500,
+        "source_kind": "demo",
+        "evidence_ids": [
+          "demo-evidence"
+        ]
+      }
+    ],
+    "metrics": {
+      "walk_meters": 1500,
+      "travel_seconds": 1800,
+      "total_seconds": 5760,
+      "finish_slack_seconds": 8640,
+      "modeled_queue_seconds": 600,
+      "schedule_wait_seconds": 0,
+      "avoid_overlap_seconds": 1800,
+      "optional_kept_count": 1,
+      "optional_replaced_count": 0,
+      "optional_removed_count": 0,
+      "wait_not_included_spot_ids": [
+        "demo-cafe"
+      ]
+    },
+    "facts": [
+      {
+        "id": "reason",
+        "kind": "change",
+        "text": "Synthetic sample preserving the requested visit order.",
+        "evidence_ids": [
+          "demo-evidence"
+        ],
+        "is_demo": true
+      },
+      {
+        "id": "tradeoff",
+        "kind": "tradeoff",
+        "text": "Changing time can add waiting or change visit order.",
+        "evidence_ids": [
+          "demo-evidence"
+        ],
+        "is_demo": true
+      },
+      {
+        "id": "uncertainty",
+        "kind": "uncertainty",
+        "text": "Crowding is unknown. Unspecified queue times are not included.",
+        "evidence_ids": [
+          "demo-evidence"
+        ],
+        "is_demo": true
+      }
+    ],
+    "explanation": {
+      "summary": "Synthetic sample preserving the requested visit order.",
+      "reason_fact_ids": [
+        "reason"
+      ],
+      "tradeoff_fact_ids": [
+        "tradeoff"
+      ],
+      "uncertainty_fact_ids": [
+        "uncertainty"
+      ],
+      "generation_mode": "template"
+    },
+    "changes": [],
+    "warnings": [
+      "Crowding is unknown. Unspecified queue times are not included."
+    ]
+  },
+  "alternatives": [
+    {
+      "id": "plan-time_shift",
+      "strategy": "time_shift",
+      "stops": [
+        {
+          "id": "origin",
+          "spot_id": "demo-origin",
+          "role": "origin",
+          "requirement": null,
+          "arrival_at": "2026-11-05T09:00:00+09:00",
+          "start_at": "2026-11-05T09:00:00+09:00",
+          "departure_at": "2026-11-05T09:00:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 0,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "id": "stop-0",
+          "spot_id": "demo-cafe",
+          "role": "visit",
+          "requirement": "optional",
+          "arrival_at": "2026-11-05T09:12:00+09:00",
+          "start_at": "2026-11-05T09:12:00+09:00",
+          "departure_at": "2026-11-05T09:32:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 0,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "id": "stop-1",
+          "spot_id": "demo-museum",
+          "role": "visit",
+          "requirement": "must",
+          "arrival_at": "2026-11-05T09:44:00+09:00",
+          "start_at": "2026-11-05T10:00:00+09:00",
+          "departure_at": "2026-11-05T10:30:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 600,
+          "schedule_wait_seconds": 360,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "id": "stop-2",
+          "spot_id": "demo-origin",
+          "role": "destination",
+          "requirement": null,
+          "arrival_at": "2026-11-05T10:42:00+09:00",
+          "start_at": "2026-11-05T10:42:00+09:00",
+          "departure_at": "2026-11-05T10:42:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 0,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        }
+      ],
+      "legs": [
+        {
+          "from_stop_id": "origin",
+          "to_stop_id": "stop-0",
+          "mode": "walking",
+          "duration_seconds": 600,
+          "buffer_seconds": 120,
+          "distance_meters": 500,
+          "source_kind": "demo",
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "from_stop_id": "stop-0",
+          "to_stop_id": "stop-1",
+          "mode": "walking",
+          "duration_seconds": 600,
+          "buffer_seconds": 120,
+          "distance_meters": 500,
+          "source_kind": "demo",
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "from_stop_id": "stop-1",
+          "to_stop_id": "stop-2",
+          "mode": "walking",
+          "duration_seconds": 600,
+          "buffer_seconds": 120,
+          "distance_meters": 500,
+          "source_kind": "demo",
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        }
+      ],
+      "metrics": {
+        "walk_meters": 1500,
+        "travel_seconds": 1800,
+        "total_seconds": 6120,
+        "finish_slack_seconds": 8280,
+        "modeled_queue_seconds": 600,
+        "schedule_wait_seconds": 360,
+        "avoid_overlap_seconds": 0,
+        "optional_kept_count": 1,
+        "optional_replaced_count": 0,
+        "optional_removed_count": 0,
+        "wait_not_included_spot_ids": [
+          "demo-cafe"
+        ]
+      },
+      "facts": [
+        {
+          "id": "reason",
+          "kind": "change",
+          "text": "Synthetic sample retaining required visits and avoiding the requested time window.",
+          "evidence_ids": [
+            "demo-evidence"
+          ],
+          "is_demo": true
+        },
+        {
+          "id": "tradeoff",
+          "kind": "tradeoff",
+          "text": "Changing time can add waiting or change visit order.",
+          "evidence_ids": [
+            "demo-evidence"
+          ],
+          "is_demo": true
+        },
+        {
+          "id": "uncertainty",
+          "kind": "uncertainty",
+          "text": "Crowding is unknown. Unspecified queue times are not included.",
+          "evidence_ids": [
+            "demo-evidence"
+          ],
+          "is_demo": true
+        }
+      ],
+      "explanation": {
+        "summary": "Synthetic sample retaining required visits and avoiding the requested time window.",
+        "reason_fact_ids": [
+          "reason"
+        ],
+        "tradeoff_fact_ids": [
+          "tradeoff"
+        ],
+        "uncertainty_fact_ids": [
+          "uncertainty"
+        ],
+        "generation_mode": "template"
+      },
+      "changes": [
+        {
+          "kind": "time_shift",
+          "original_spot_id": "demo-museum",
+          "replacement_spot_id": null,
+          "before_start_at": null,
+          "after_start_at": null,
+          "reason_fact_ids": [
+            "reason"
+          ]
+        }
+      ],
+      "warnings": [
+        "Crowding is unknown. Unspecified queue times are not included."
+      ]
+    },
+    {
+      "id": "plan-place_shift",
+      "strategy": "place_shift",
+      "stops": [
+        {
+          "id": "origin",
+          "spot_id": "demo-origin",
+          "role": "origin",
+          "requirement": null,
+          "arrival_at": "2026-11-05T09:00:00+09:00",
+          "start_at": "2026-11-05T09:00:00+09:00",
+          "departure_at": "2026-11-05T09:00:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 0,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "id": "stop-0",
+          "spot_id": "demo-museum",
+          "role": "visit",
+          "requirement": "must",
+          "arrival_at": "2026-11-05T09:12:00+09:00",
+          "start_at": "2026-11-05T09:22:00+09:00",
+          "departure_at": "2026-11-05T09:52:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 600,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "id": "stop-1",
+          "spot_id": "demo-garden",
+          "role": "visit",
+          "requirement": "optional",
+          "arrival_at": "2026-11-05T10:04:00+09:00",
+          "start_at": "2026-11-05T10:04:00+09:00",
+          "departure_at": "2026-11-05T10:24:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 0,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "id": "stop-2",
+          "spot_id": "demo-origin",
+          "role": "destination",
+          "requirement": null,
+          "arrival_at": "2026-11-05T10:36:00+09:00",
+          "start_at": "2026-11-05T10:36:00+09:00",
+          "departure_at": "2026-11-05T10:36:00+09:00",
+          "locked_start_at": null,
+          "opening_wait_seconds": 0,
+          "queue_seconds": 0,
+          "schedule_wait_seconds": 0,
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        }
+      ],
+      "legs": [
+        {
+          "from_stop_id": "origin",
+          "to_stop_id": "stop-0",
+          "mode": "walking",
+          "duration_seconds": 600,
+          "buffer_seconds": 120,
+          "distance_meters": 500,
+          "source_kind": "demo",
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "from_stop_id": "stop-0",
+          "to_stop_id": "stop-1",
+          "mode": "walking",
+          "duration_seconds": 600,
+          "buffer_seconds": 120,
+          "distance_meters": 500,
+          "source_kind": "demo",
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        },
+        {
+          "from_stop_id": "stop-1",
+          "to_stop_id": "stop-2",
+          "mode": "walking",
+          "duration_seconds": 600,
+          "buffer_seconds": 120,
+          "distance_meters": 500,
+          "source_kind": "demo",
+          "evidence_ids": [
+            "demo-evidence"
+          ]
+        }
+      ],
+      "metrics": {
+        "walk_meters": 1500,
+        "travel_seconds": 1800,
+        "total_seconds": 5760,
+        "finish_slack_seconds": 8640,
+        "modeled_queue_seconds": 600,
+        "schedule_wait_seconds": 0,
+        "avoid_overlap_seconds": 1800,
+        "optional_kept_count": 0,
+        "optional_replaced_count": 1,
+        "optional_removed_count": 0,
+        "wait_not_included_spot_ids": [
+          "demo-garden"
+        ]
+      },
+      "facts": [
+        {
+          "id": "reason",
+          "kind": "change",
+          "text": "Synthetic sample replacing the optional cafe with a garden.",
+          "evidence_ids": [
+            "demo-evidence"
+          ],
+          "is_demo": true
+        },
+        {
+          "id": "tradeoff",
+          "kind": "tradeoff",
+          "text": "The cafe experience is lost.",
+          "evidence_ids": [
+            "demo-evidence"
+          ],
+          "is_demo": true
+        },
+        {
+          "id": "uncertainty",
+          "kind": "uncertainty",
+          "text": "Crowding is unknown. Unspecified queue times are not included.",
+          "evidence_ids": [
+            "demo-evidence"
+          ],
+          "is_demo": true
+        }
+      ],
+      "explanation": {
+        "summary": "Synthetic sample replacing the optional cafe with a garden.",
+        "reason_fact_ids": [
+          "reason"
+        ],
+        "tradeoff_fact_ids": [
+          "tradeoff"
+        ],
+        "uncertainty_fact_ids": [
+          "uncertainty"
+        ],
+        "generation_mode": "template"
+      },
+      "changes": [
+        {
+          "kind": "place_replacement",
+          "original_spot_id": "demo-cafe",
+          "replacement_spot_id": "demo-garden",
+          "before_start_at": null,
+          "after_start_at": null,
+          "reason_fact_ids": [
+            "reason"
+          ]
+        }
+      ],
+      "warnings": [
+        "Crowding is unknown. Unspecified queue times are not included."
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "id": "demo-evidence",
+      "source_kind": "demo",
+      "provider": "team-synthetic-fixture",
+      "title": "Synthetic development sample",
+      "source_url": null,
+      "checked_at": "2026-11-05T09:00:00+09:00",
+      "confidence": "unknown",
+      "is_demo": true,
+      "note": "Places, coordinates, routes and hours are synthetic. Do not use for travel."
+    }
+  ],
+  "status": "partial",
+  "violations": [],
+  "warnings": [
+    "EXPLANATION_FALLBACK"
+  ],
+  "created_at": "2026-11-05T09:00:00+09:00"
+}

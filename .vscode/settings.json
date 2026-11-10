@@ -1,0 +1,12 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv",
+  "typescript.tsdk": "frontend/node_modules/typescript/lib",
+  "eslint.workingDirectories": [
+    "frontend"
+  ],
+  "files.exclude": {
+    "**/.tools": true,
+    "**/node_modules": true,
+    "**/.venv": true
+  }
+}

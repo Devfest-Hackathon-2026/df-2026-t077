@@ -1,0 +1,16 @@
+import type { components } from './schema'
+type Schemas = components['schemas']
+export type Spot = Schemas['Spot']
+export type Trip = Schemas['Trip']
+export type Plan = Schemas['Plan']
+export type ProposalBundle = Schemas['ProposalBundle']
+export type TripResponse = Schemas['TripResponse']
+export type Evidence = Schemas['Evidence']
+export type WaitAssumption = Schemas['WaitAssumption']
+export type IntentDraft = Schemas['IntentDraft']
+export type Locale = 'ja' | 'en'
+export type TripCreateRequest = Schemas['TripCreateRequest']
+export type ProposalRequest = Schemas['ProposalRequest']
+export type SelectionRequest = Schemas['SelectionRequest']
+export type IntentInterpretRequest = Schemas['IntentInterpretRequest']
+export type ErrorResponse = Schemas['ErrorResponse']

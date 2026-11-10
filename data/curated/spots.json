@@ -1,0 +1,634 @@
+{
+  "items": [
+    {
+      "id": "nagoya-castle",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "名古屋城（正門）",
+      "name_en": "Nagoya Castle (Main Gate)",
+      "description_ja": "徳川家康の命によって築かれた城郭で、金のしゃちほこを載せた天守の外観や復元された本丸御殿が代表的な見どころ。正門を出発地点として、城内の庭園、石垣、歴史展示などを巡りながら、尾張の城下町を支えた城の歩みを知ることができます。",
+      "description_en": "Built under Tokugawa Ieyasu, Nagoya Castle is known for its golden roof ornaments and reconstructed Hommaru Palace. Starting at the Main Gate, visitors can explore the gardens, stone walls, and historical displays while learning about the castle and the city it shaped.",
+      "visitor_info_ja": "観覧料：大人1,000円、名古屋市内在住65歳以上300円（条件あり）、中学生以下無料。休園：12月29日～1月1日（催事等で変更あり）。開園9:00～16:30、城への最終入場16:00。本丸御殿・西の丸御蔵城宝館も16:00までに各入口へ。天守閣内部は入場不可。窓口で当日券購入可。",
+      "visitor_info_en": "Admission: adults ¥1,000; eligible Nagoya residents aged 65+ ¥300; junior high school students and younger free. Closed Dec 29–Jan 1, subject to event changes. Open 9:00–16:30; last castle entry 16:00, also the deadline to reach the Hommaru Palace and museum entrances. The main tower interior is inaccessible. Tickets are sold on site.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.183615,
+        "lng": 136.898216
+      },
+      "tags": [
+        "history",
+        "photography",
+        "art"
+      ],
+      "stay_seconds": 5400,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00+09:00",
+          "closes_at": "2026-11-05T16:30+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-nagoya-castle-official",
+        "ev-nagoya-castle-en"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "meijo-park",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "名城公園",
+      "name_en": "Meijo Park",
+      "description_ja": "名古屋城の北側に広がる緑地で、芝生広場やおふけ池、季節の花を楽しめる庭園があります。名古屋城の姿を眺められる場所もあり、散歩や植物観察、風景写真を撮る立ち寄り先として利用できます。公園の屋外エリアとフラワープラザは利用時間が異なります。",
+      "description_en": "This park north of Nagoya Castle has broad lawns, Ofukeike Pond, and gardens with seasonal flowers. Visitors can enjoy a walk, photograph greenery and castle views, or explore plant displays. The outdoor park and the indoor Flower Plaza have different visiting hours.",
+      "visitor_info_ja": "屋外公園：常時開放、通年利用可、無料。フラワープラザ：9:00～16:30、無料。休館は月曜（祝日等は翌平日）、毎月第3水曜（祝日の場合は第4水曜）、12月29日～1月3日。11月5日(木)は通常の休館日に当たらない。屋外部分の最終入園は設定なし。荒天・警報時の臨時休館などは未確認（フラワープラザは警報による臨時休館の可能性あり）。",
+      "visitor_info_en": "Outdoor park: open at all times, year-round, free. Flower Plaza: 9:00–16:30, free; closed on Mondays (or the following weekday after holidays), the third Wednesday each month (or fourth when a holiday), and Dec 29–Jan 3. Nov 5 is not a regular closure day. No last entry for the outdoor park is specified. Flower Plaza may close temporarily during weather warnings.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.188603,
+        "lng": 136.901605
+      },
+      "tags": [
+        "nature",
+        "photography"
+      ],
+      "stay_seconds": 3600,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T00:00+09:00",
+          "closes_at": "2026-11-05T23:59:59+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-meijo-park-tourism",
+        "ev-meijo-park-city"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "osu-kannon",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "大須観音",
+      "name_en": "Osu Kannon Temple",
+      "description_ja": "大須の中心にある真言宗の寺院で、正式には北野山真福寺宝生院といいます。江戸時代初めに現在の地へ移され、現在の本堂は戦後に再建されました。境内で参拝した後は、大須の商店街へ歩いて向かうこともでき、歴史と街歩きを組み合わせやすい場所です。",
+      "description_en": "Osu Kannon is a Shingon Buddhist temple formally known as Kitanozan Shinpukuji Hoshoin. It was relocated to this area in the early Edo period, and its present main hall was rebuilt after wartime destruction. Visitors can pray at the temple before continuing on foot into the surrounding shopping district.",
+      "visitor_info_ja": "参拝無料、無休。本堂6:00～19:00、寺務所9:00～17:00。通常の参拝に予約は不要（チーム確認）。写経会など一部の催しは予約制。最終入堂時刻の別途指定は未確認。駐車場なし。",
+      "visitor_info_en": "General visits are free and there are no regular closed days. Main hall 6:00–19:00; temple office 9:00–17:00. No reservation is needed for ordinary visits (team-confirmed); some activities such as sutra-copying sessions require booking. A separate last-entry cutoff is unconfirmed. No parking on site.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.159666,
+        "lng": 136.89931
+      },
+      "tags": [
+        "history",
+        "photography"
+      ],
+      "stay_seconds": 1800,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T06:00+09:00",
+          "closes_at": "2026-11-05T19:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-osu-kannon-site",
+        "ev-osu-kannon-tourism"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "banshoji",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "万松寺",
+      "name_en": "Kigakurin Banshoji Temple",
+      "description_ja": "織田信長の父・織田信秀が一族の菩提寺として開いた寺で、大須商店街の中にあります。十一面観世音菩薩を本尊とし、信秀の墓碑やからくり人形など、織田家にまつわる見どころが残ります。買い物の途中でも立ち寄り、地域に受け継がれた歴史に触れられる場所です。",
+      "description_en": "Banshoji Temple stands within the Osu shopping district and was founded by Oda Nobuhide, father of Oda Nobunaga, as the Oda family temple. Its sights include an Eleven-Faced Kannon, Nobuhide-related memorials, and mechanical puppet displays, offering a cultural stop during a walk through Osu.",
+      "visitor_info_ja": "境内参拝は自由・無料、年中無休。境内は常時開放、受処は10:00～18:00。受付の最終時刻は未確認。別料金の拝観ツアー（1,500円、約30分）と法話プラン（3,000円、約50分）は当日受付のみ、開催日時は別途確認。通常参拝と区別すること。",
+      "visitor_info_en": "Grounds are open at all times, free of charge, throughout the year. Reception counters operate 10:00–18:00; the final reception cutoff is unconfirmed. Optional guided tours cost ¥1,500 (about 30 minutes) and the talk-and-tea plan costs ¥3,000 (about 50 minutes), with same-day registration only; dates require separate confirmation.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.159119,
+        "lng": 136.904674
+      },
+      "tags": [
+        "history",
+        "photography"
+      ],
+      "stay_seconds": 1800,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T00:00+09:00",
+          "closes_at": "2026-11-05T23:59:59+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-banshoji-official",
+        "ev-banshoji-tourism"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "atsuta-horaiken-matsuzakaya",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "あつた蓬莱軒 松坂屋店",
+      "name_en": "Atsuta Houraiken, Matsuzakaya Store",
+      "description_ja": "名古屋のうなぎ料理を代表する老舗「あつた蓬莱軒」の松坂屋名古屋店にある店舗です。南館10階で、炭火で焼いたうなぎを使ったひつまぶしを味わえます。薬味やだしを組み合わせて食べ方を変える楽しみがあり、栄・矢場町周辺の観光途中に食事を組み込みやすい立地です。",
+      "description_en": "This branch of the long-established eel restaurant Atsuta Houraiken is on the tenth floor of Matsuzakaya Nagoya’s South Building. Its specialty is hitsumabushi, grilled eel served over rice and enjoyed with different condiments and broth. It makes a convenient meal stop around Yabacho and Sakae.",
+      "visitor_info_ja": "通常の食事は来店順に受付、予約不要。会席料理は平日限定で3日前までの電話予約が必要。通常定休は火曜（祝日は営業・振替休業あり）。2026年11月3日は営業、4日は振替休業、5日(木)は通常営業の案内。平日11:00～15:30（昼受付14:30まで）、16:30～22:00（L.O.20:30）。早期受付終了あり。料理代は注文による（松坂屋の目安は税込4,600～5,000円）。",
+      "visitor_info_en": "Ordinary dining is handled in arrival order without reservations; weekday kaiseki courses require advance phone booking at least three days beforehand. Usually closed Tuesdays, with holiday substitutions: open Nov 3, closed Nov 4, and Nov 5 follows regular Thursday hours. Weekdays 11:00–15:30 (lunch reception to 14:30), 16:30–22:00 (last order 20:30). Reception may close earlier. Matsuzakaya gives an indicative spend of ¥4,600–¥5,000.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.164741,
+        "lng": 136.907996
+      },
+      "tags": [
+        "food"
+      ],
+      "stay_seconds": 5400,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T11:00+09:00",
+          "closes_at": "2026-11-05T15:30+09:00"
+        },
+        {
+          "opens_at": "2026-11-05T16:30+09:00",
+          "closes_at": "2026-11-05T22:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-atsuta-own",
+        "ev-atsuta-matsuzakaya"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "yabaton-yabacho",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "矢場とん 矢場町本店",
+      "name_en": "Misokatsu Yabaton - Yabacho Restaurant",
+      "description_ja": "名古屋の味噌かつを中心に提供する矢場とんの矢場町本店です。とんかつに独自の味噌だれを合わせた料理が特徴で、わらじとんかつや鉄板料理などの名古屋めしを楽しめます。大須と矢場町の間に位置し、街歩きの途中に食事を取る候補として使いやすいお店です。",
+      "description_en": "The Yabacho flagship restaurant of Yabaton specializes in Nagoya-style miso pork cutlets. Diners can try dishes such as large waraji tonkatsu or sizzling pork cutlets with the restaurant’s signature miso sauce. Its location between Osu and Yabacho suits a meal during sightseeing.",
+      "visitor_info_ja": "営業時間11:00～21:00、定休日なし。予約可能だが通常の来店も受け付けるため予約必須ではない。価格は注文料理により異なる。ラストオーダーと臨時休業は未確認。",
+      "visitor_info_en": "Open 11:00–21:00 with no regular closing day. Reservations are available but walk-ins are also accepted. Prices depend on the dish ordered. Last order and special closures are unconfirmed.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.161731,
+        "lng": 136.906762
+      },
+      "tags": [
+        "food"
+      ],
+      "stay_seconds": 3600,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T11:00+09:00",
+          "closes_at": "2026-11-05T21:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-yabaton-official",
+        "ev-yabaton-english"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "yamamotoya-honke",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "山本屋総本家 本家",
+      "name_en": "Yamamotoya Sohonke (Main Store)",
+      "description_ja": "大正時代に創業した山本屋総本家の本家店舗で、名古屋名物の味噌煮込うどんを提供しています。濃い味噌のだしと歯ごたえのある麺を組み合わせた鍋料理が看板で、栄の街歩きの途中に名古屋めしを味わう候補になります。",
+      "description_en": "Yamamotoya Sohonke’s main restaurant specializes in Nagoya’s miso-nikomi udon, noodles simmered in a rich miso broth with firm noodles. It is a candidate stop for trying Nagoya cuisine during a walk around Sakae.",
+      "visitor_info_ja": "平日の営業時間11:00～22:00、通常の食事に予約は不要（チーム確認）。通常定休は火・水（公式店舗一覧）。臨時の営業日変更あり（例：2026年11月5日(木)は振替店休日と公式告知）。料理代はメニューによる。",
+      "visitor_info_en": "Weekday hours 11:00–22:00; no reservation is needed for ordinary dining (team-confirmed). Regularly closed on Tuesdays and Wednesdays (official store list). Business days can change, e.g. Thursday Nov 5, 2026 was officially announced as a substitute closure day. Food prices depend on the menu.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.165674,
+        "lng": 136.908163
+      },
+      "tags": [
+        "food"
+      ],
+      "stay_seconds": 3600,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T11:00+09:00",
+          "closes_at": "2026-11-05T22:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-yamamotoya-november",
+        "ev-yamamotoya-store"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "compal-osu",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "コンパル 大須本店",
+      "name_en": "Konparu Osu Main Store",
+      "description_ja": "大須にある老舗の喫茶店で、昭和の雰囲気が残る店内とサンドイッチが特徴です。エビフライを挟んだ名物サンドや、自分で氷のグラスに注ぐアイスコーヒーなど、名古屋らしい喫茶文化を体験できます。商店街を散策する際の朝食や休憩、軽食の候補になります。",
+      "description_en": "Konparu’s Osu main store is a long-established coffee shop with retro Showa-era interiors. Its best-known menu includes a fried-shrimp sandwich and iced coffee poured by the customer over ice. It is a place to experience Nagoya’s café culture during breakfast or a break from exploring Osu.",
+      "visitor_info_ja": "営業時間8:00～19:00、定休日なし（名古屋観光公式で確認）。通常の飲食に予約は不要（チーム確認）。ラストオーダーは店舗公式ページを直接開けなかったため未確認（検索結果では18:30）。価格は注文内容による。臨時休業は未確認。",
+      "visitor_info_en": "Hours 8:00–19:00; no regular closing day, per the official Nagoya tourism guide. No reservation is needed for ordinary dining (team-confirmed). Last order is unconfirmed because the shop website could not be opened (a search preview shows 18:30). Prices vary by order. Special closures are unconfirmed.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.159434,
+        "lng": 136.9047
+      },
+      "tags": [
+        "food"
+      ],
+      "stay_seconds": 3600,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T08:00+09:00",
+          "closes_at": "2026-11-05T19:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-compal-tourism"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "osu-shopping-street",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "大須商店街",
+      "name_en": "Osu Shopping District",
+      "description_ja": "大須二丁目から三丁目にかけて広がる商店街エリアで、飲食店、古着店、電器店、雑貨店など幅広い業種が集まっています。歴史ある寺院と新しいカルチャーが近い距離に並ぶのが特徴で、目的の店を選んで歩くことも、街並みを見ながら散策することもできます。営業時間は店ごとに異なります。",
+      "description_en": "Osu is a collection of shopping streets spanning parts of Osu 2-chome and 3-chome. Food stalls, vintage clothing shops, electronics stores, and other businesses stand close to temples and cultural venues. Visitors can shop or simply explore on foot; opening times depend on each individual business.",
+      "visitor_info_ja": "公道の商店街のため散策は常時可能で、入場料・予約は不要（チーム確認）。商店街全体の統一営業時間・定休日はなく、各店舗の営業時間・ラストオーダーは店ごとに異なる。買い物・飲食の料金は店舗・注文による。",
+      "visitor_info_en": "The shopping streets are public and can be walked at any time; no admission or reservation is needed (team-confirmed). There are no district-wide business hours or closing days; each shop sets its own hours and last orders. Prices depend on the shop and order.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.159087,
+        "lng": 136.9025
+      },
+      "tags": [
+        "food",
+        "photography"
+      ],
+      "stay_seconds": 5400,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T00:00+09:00",
+          "closes_at": "2026-11-05T23:59:59+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-osu-shopping-tourism"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "oasis21",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "オアシス21",
+      "name_en": "Oasis 21",
+      "description_ja": "栄駅に直結する立体的な都市施設で、地下の「銀河の広場」、地上の「緑の大地」、ガラス屋根の「水の宇宙船」などからなります。建築や広場の空間を楽しめる立ち寄り先ですが、2026年11月4日～2027年4月30日（予定）は改修工事のため屋上の水の宇宙船に上がれません。",
+      "description_en": "Oasis 21 connects directly to Sakae Station and combines the underground Galaxy Plaza, the Green Earth park, and a glass-roof landmark called Spaceship-Aqua. Renovation closes the Spaceship-Aqua rooftop from Nov 4, 2026 to Apr 30, 2027 (planned).",
+      "visitor_info_ja": "銀河の広場6:00～23:00、緑の大地は常時開放、基本入場無料。ショップは1月1日と年2回の臨時休業あり、各店の営業時間は異なる。重要：屋上「水の宇宙船」は2026年11月4日～2027年4月30日（予定）閉鎖。地下広場も11月上旬から一部閉鎖予定で、立入可能な区画は訪問前に公式で要確認。屋上最終入場は対象外。",
+      "visitor_info_en": "Galaxy Plaza opens 6:00–23:00, while the outdoor Green Earth area is open at all times; general admission is free. Shops have separate hours and may close on Jan 1 and two additional days each year. Crucially, the Spaceship-Aqua rooftop is closed Nov 4, 2026–Apr 30, 2027 (planned). Parts of the underground plaza may also close in early November; check accessible zones on the official site before visiting.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.170848,
+        "lng": 136.909528
+      },
+      "tags": [
+        "photography",
+        "nature"
+      ],
+      "stay_seconds": 2700,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T06:00+09:00",
+          "closes_at": "2026-11-05T23:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-oasis21-official",
+        "ev-oasis21-renovation"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "sunshine-sakae",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "サンシャインサカエ",
+      "name_en": "SUNSHINE SAKAE",
+      "description_ja": "栄駅と地下でつながる商業施設で、建物に設置された観覧車「Sky-Boat」が目印です。飲食店や買い物施設、劇場など複数の用途が集まり、栄エリアでの立ち寄り先になります。観覧車からは栄の街並みを見渡せます。",
+      "description_en": "SUNSHINE SAKAE is a multi-purpose commercial complex connected to Sakae Station, recognizable by the Sky-Boat Ferris wheel attached to its building. It also houses shops, restaurants, and a theater, and the wheel offers views over the Sakae district.",
+      "visitor_info_ja": "営業時間9:00～22:00、予約不要（チーム確認）。店舗ごとに営業時間が異なり、休業は不定休。観覧車Sky-Boatは1周約15分、通常料金600円。期間限定イベント中は時間・料金が変わる場合あり（例：2026年10月1日～11月23日は12:00～22:00・最終搭乗21:45・700円）。天候等で休止の可能性あり。5歳以下は16歳以上の保護者同伴が必要。",
+      "visitor_info_en": "Hours 9:00–22:00; no reservation needed (team-confirmed). Individual shops have their own hours and irregular closing days. The Sky-Boat Ferris wheel takes about 15 minutes per ride; the regular fare is ¥600. Special events can change hours and fares (e.g. Oct 1–Nov 23, 2026: 12:00–22:00, last boarding 21:45, ¥700). Weather can suspend operation. Children aged five or under need a guardian aged 16 or older.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.16947,
+        "lng": 136.906289
+      },
+      "tags": [
+        "photography"
+      ],
+      "stay_seconds": 900,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00+09:00",
+          "closes_at": "2026-11-05T22:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "ev-sunshine-sakae-faq",
+        "ev-sunshine-sakae-skyboat",
+        "ev-sunshine-sakae-event"
+      ],
+      "is_demo": false
+    },
+    {
+      "id": "sakae-station",
+      "area_id": "nagoya-central",
+      "google_place_id": null,
+      "name_ja": "栄駅",
+      "name_en": "Sakae Station",
+      "description_ja": "名古屋市営地下鉄の東山線と名城線が交わる栄駅。地下の改札や乗換通路を利用でき、オアシス21やサンシャインサカエ方面へ移動する起点となります。このアプリでは駅そのものを観光施設として扱わず、徒歩ルートの出発地点・到着地点にのみ使用します。",
+      "description_en": "Sakae Station is an interchange between Nagoya Municipal Subway’s Higashiyama and Meijo lines. Its underground passages connect travelers with central Sakae attractions including Oasis 21 and Sunshine Sakae. In this app it serves only as a route starting or ending point, not as an indoor attraction.",
+      "visitor_info_ja": "起終点のみのため滞在・入館は設定しない。乗車運賃、駅施設の開閉時間・最終列車・個別出口利用時間は対象外で未確認。",
+      "visitor_info_en": "This is only a route origin/destination, with no planned visit or admission. Fares, station opening hours, last trains, and individual exit hours are outside scope and unconfirmed.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.169389,
+        "lng": 136.90861
+      },
+      "tags": [],
+      "stay_seconds": 0,
+      "opening_status": "unknown",
+      "opening_windows": [],
+      "evidence_ids": [
+        "ev-sakae-station-transit"
+      ],
+      "is_demo": false
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-nagoya-castle-official",
+      "source_kind": "curated",
+      "provider": "名古屋城公式ウェブサイト",
+      "title": "利用案内",
+      "source_url": "https://www.nagoyajo.city.nagoya.jp/info/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。公式の見学所要時間は約1時間～1時間30分。90分を採用。名古屋城本体と正門ウェイポイントを区別する。2026-10-01からの料金改定後を使用。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-nagoya-castle-en",
+      "source_kind": "curated",
+      "provider": "Nagoya Castle Official Website",
+      "title": "Visitor Information",
+      "source_url": "https://www.nagoyajo.city.nagoya.jp/en/information/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。正門(Main Gate)英語表記、最終入城16:00、当日チケット窓口を確認。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-meijo-park-tourism",
+      "source_kind": "curated",
+      "provider": "公益財団法人名古屋観光コンベンションビューロー",
+      "title": "Meijo Park | Visit Nagoya-Nagoya City Guide",
+      "source_url": "https://www.nagoya-info.jp/en/spot/detail/111",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。屋外公園はOpen for visitors at any time、通年、無料と明記。終日営業を同一日付に収めるため23:59:59で技術的に切った。実際の閉園時刻ではない。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-meijo-park-city",
+      "source_kind": "curated",
+      "provider": "名古屋市",
+      "title": "名城公園",
+      "source_url": "https://www.city.nagoya.jp/kurashi/douro/1014853/1014854/1014867.html",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。フラワープラザの営業時間・休館日は公園全体には適用しない。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-osu-kannon-site",
+      "source_kind": "curated",
+      "provider": "大須観音（北野山真福寺宝生院）",
+      "title": "大須観音 公式ホームページ",
+      "source_url": "https://www.osu-kannon.jp/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "medium",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。参拝所要時間はチームの仮定。公式トップに写経会が予約制とあるが、通常参拝に予約制の記述なし。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。 【チーム確認 2026-11-09】通常参拝は予約不要。"
+    },
+    {
+      "id": "ev-osu-kannon-tourism",
+      "source_kind": "curated",
+      "provider": "公益財団法人名古屋観光コンベンションビューロー",
+      "title": "大須観音(真福寺宝生院) | 名古屋教育旅行",
+      "source_url": "https://www.nagoya-info.jp/education/facility/detail/13/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。本堂時間・寺務所時間・無料・無休を確認。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-banshoji-official",
+      "source_kind": "curated",
+      "provider": "亀岳林 万松寺",
+      "title": "亀岳林 万松寺",
+      "source_url": "https://www.banshoji.or.jp/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "medium",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。寺院の沿革を確認。通常参拝所要時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-banshoji-tourism",
+      "source_kind": "curated",
+      "provider": "公益財団法人名古屋観光コンベンションビューロー",
+      "title": "亀岳林 万松寺 | 名古屋コンシェルジュ",
+      "source_url": "https://www.nagoya-info.jp/spot/detail/71/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。境内自由・受処10:00～18:00・無休・無料を確認。終日開放は同日付の23:59:59で表現しただけで閉門時刻ではない。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-atsuta-own",
+      "source_kind": "curated",
+      "provider": "あつた蓬莱軒",
+      "title": "あつた蓬莱軒 店舗一覧・アクセス",
+      "source_url": "https://www.houraiken.com/access.html",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。松坂屋店の平日14:30・20:30はラストオーダー時刻であり閉店時刻ではない。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-atsuta-matsuzakaya",
+      "source_kind": "curated",
+      "provider": "松坂屋名古屋店",
+      "title": "あつた蓬莱軒 [レストラン・喫茶]",
+      "source_url": "https://www.matsuzakaya.co.jp/nagoya/restaurant/atsutahouraiken.html",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。百貨店公式から平日15:30・22:00の閉店時刻、11月3日営業／4日休業、会席以外は来店順と確認。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-yabaton-official",
+      "source_kind": "curated",
+      "provider": "矢場とん",
+      "title": "矢場町本店 | 名古屋名物みそかつ 矢場とん",
+      "source_url": "https://www.yabaton.com/stores/yabacho-honten",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "medium",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。通常営業時間・定休日なし・予約可能を確認。ラストオーダー・11月5日の個別臨時休業はTODO。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-yabaton-english",
+      "source_kind": "curated",
+      "provider": "公益財団法人名古屋観光コンベンションビューロー",
+      "title": "Misokatsu Yabaton - Yabacho Restaurant | Visit Nagoya",
+      "source_url": "https://www.nagoya-info.jp/en/gourmet/detail/24/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。公式観光英語ページの表記を採用。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-yamamotoya-november",
+      "source_kind": "curated",
+      "provider": "山本屋総本家",
+      "title": "【山本屋総本家 本家 11月 営業日変更のご案内】",
+      "source_url": "https://yamamotoya.co.jp/news/%E3%80%90%E5%B1%B1%E6%9C%AC%E5%B1%8B%E7%B7%8F%E6%9C%AC%E5%AE%B6-%E3%80%80%E6%9C%AC%E5%AE%B6%E3%80%8011%E6%9C%88-%E5%96%B6%E6%A5%AD%E6%97%A5%E5%A4%89%E6%9B%B4%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。2026年10月30日掲載。11月5日(木)振替店休日が明記されるため通常営業を上書き。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。 【チーム確認 2026-11-09】11/5の振替店休日は臨時の変更としてvisitor_infoへ記載し、通常の営業時間には反映しない。"
+    },
+    {
+      "id": "ev-yamamotoya-store",
+      "source_kind": "curated",
+      "provider": "山本屋総本家",
+      "title": "飲食店舗一覧",
+      "source_url": "https://yamamotoya.co.jp/shoplist/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。本家（住所 栄3-12-19）と松坂屋店を取り違えないこと。入力座標が本家の実所在地と一致するか人間確認要。予約必須条件はTODO。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。 【チーム確認 2026-11-09】営業時間はチーム確認の平日11:00～22:00を採用（AI調査で読んだ昼夜二部制の表記はチームが確認のうえ置換）。予約不要。"
+    },
+    {
+      "id": "ev-compal-tourism",
+      "source_kind": "curated",
+      "provider": "公益財団法人名古屋観光コンベンションビューロー",
+      "title": "コンパル大須本店 | 名古屋コンシェルジュ",
+      "source_url": "https://www.nagoya-info.jp/gourmet/detail/23/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "medium",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。施設公式 konparu.co.jp/shop/ は検索で発見したが直接開いた際にタイムアウト。L.O.18:30を検索断片から確定採用せずTODO。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。 【チーム確認 2026-11-09】通常飲食は予約不要。"
+    },
+    {
+      "id": "ev-osu-shopping-tourism",
+      "source_kind": "curated",
+      "provider": "公益財団法人名古屋観光コンベンションビューロー",
+      "title": "大須商店街 | 名古屋コンシェルジュ",
+      "source_url": "https://www.nagoya-info.jp/spot/detail/19/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。商店街連盟の公式サイトは検索できたが直接開くと404のため、名古屋観光公式を採用。統一営業時間なし。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。 【チーム確認 2026-11-09】街路は常時通行可として00:00～23:59:59で表現（各店舗の営業時間ではない）。予約不要。"
+    },
+    {
+      "id": "ev-oasis21-official",
+      "source_kind": "curated",
+      "provider": "栄公園振興株式会社（オアシス21）",
+      "title": "オアシス２１について",
+      "source_url": "https://www.sakaepark.co.jp/about/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。opening_windowsは銀河の広場の開放時間を代表値として採用。緑の大地は24時間開放。滞在時間はチームの仮定。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-oasis21-renovation",
+      "source_kind": "curated",
+      "provider": "栄公園振興株式会社（オアシス21）",
+      "title": "工事に伴う施設の一部閉鎖について（Notice of Partial Facility Closure）",
+      "source_url": "https://www.sakaepark.co.jp/news/news-8135/",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。2026年10月28日付。11月5日に屋上閉鎖が該当。地下広場の実際の閉鎖区画はTODO。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-sunshine-sakae-faq",
+      "source_kind": "curated",
+      "provider": "サンシャインサカエ",
+      "title": "FAQ（よくあるご質問）",
+      "source_url": "https://www.sunshine-sakae.jp/utility/faq.html",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。ビル全体の開閉時刻は未設定で、店舗別に異なる。休館は不定休。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。 【チーム確認 2026-11-09】施設の営業時間9:00～22:00、予約不要。"
+    },
+    {
+      "id": "ev-sunshine-sakae-skyboat",
+      "source_kind": "curated",
+      "provider": "サンシャインサカエ",
+      "title": "Sky-Boat",
+      "source_url": "https://www.sunshine-sakae.jp/floor/3f/01.html",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。通常料金600円、最終搭乗21:45、1周15分を確認。stay_seconds=900は観覧車1周の公式時間であり建物内の滞在時間ではない。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-sunshine-sakae-event",
+      "source_kind": "curated",
+      "provider": "サンシャインサカエ",
+      "title": "SKE48 劇場デビュー18周年 × SUNSHINE SAKAE",
+      "source_url": "https://www.sunshine-sakae.jp/event/eve_1022.html",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。イベント2026-10-01～11-23の料金700円を11月5日に優先適用。天候による休止があり、11月5日の実施確約ではない。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    },
+    {
+      "id": "ev-sakae-station-transit",
+      "source_kind": "curated",
+      "provider": "名古屋市交通局",
+      "title": "栄 | 地下鉄 | 名古屋市交通局",
+      "source_url": "https://www.kotsu.city.nagoya.jp/rp/SUBWAY/station_top.html?name=%E6%A0%84",
+      "checked_at": "2026-11-09T21:06:03+09:00",
+      "confidence": "high",
+      "is_demo": false,
+      "note": "AI調査・チーム確認済み（2026-11-09）。東山線・名城線の駅情報を確認。駅を施設として営業時間評価しない仕様に従いopening_status=unknown。 確認時刻はWeb調査セッションの代表時刻で、ページ別の秒単位ログではない。"
+    }
+  ]
+}

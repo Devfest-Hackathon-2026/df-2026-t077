@@ -1,0 +1,21 @@
+{
+  "draft": {
+    "interests": null,
+    "requested_stops": [],
+    "max_walk_meters": null,
+    "end_at": null,
+    "avoid_windows": [],
+    "wait_assumptions": [],
+    "field_notes": []
+  },
+  "unresolved": [
+    {
+      "field": "max_walk_meters",
+      "question": "Enter your walking limit.",
+      "source_quote": "I do not want to walk much"
+    }
+  ],
+  "warnings": [],
+  "generation_mode": "template",
+  "requires_confirmation": true
+}

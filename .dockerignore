@@ -1,0 +1,12 @@
+# Allow-list: the image needs only the backend, its lockfile and the read-only data it serves.
+*
+!Dockerfile
+!backend/pyproject.toml
+!backend/uv.lock
+!backend/app/
+!contracts/fixtures/v3/
+!data/curated/
+# Never ship local caches or secrets even if they appear under an allowed path.
+**/__pycache__/
+**/.env
+**/.env.*

@@ -1,0 +1,58 @@
+{
+  "client_request_id": "00000000-0000-4000-8000-000000000001",
+  "constraints": {
+    "area_id": "demo-area",
+    "timezone": "Asia/Tokyo",
+    "start_at": "2026-11-05T09:00:00+09:00",
+    "end_at": "2026-11-05T13:00:00+09:00",
+    "start_spot_id": "demo-origin",
+    "end_spot_id": "demo-origin",
+    "mode": "walking",
+    "max_walk_meters": 3000,
+    "max_visits": 3,
+    "interests": [
+      "history",
+      "quiet"
+    ],
+    "party_size": 1,
+    "locale": "ja",
+    "avoid_windows": [
+      {
+        "id": "avoid-museum",
+        "spot_id": "demo-museum",
+        "starts_at": "2026-11-05T09:00:00+09:00",
+        "ends_at": "2026-11-05T10:00:00+09:00",
+        "basis": "demo_assumption",
+        "evidence_ids": [
+          "demo-evidence"
+        ],
+        "note": "demo preference, not measured crowd"
+      }
+    ],
+    "wait_assumptions": [
+      {
+        "spot_id": "demo-museum",
+        "wait_seconds": 600,
+        "basis": "demo_assumption",
+        "observed_at": null,
+        "note": "same assumption for all plans"
+      }
+    ],
+    "omakase_visits": 0
+  },
+  "requested_stops": [
+    {
+      "spot_id": "demo-museum",
+      "requirement": "must",
+      "locked_start_at": null,
+      "reservation_confirmed": false
+    },
+    {
+      "spot_id": "demo-cafe",
+      "requirement": "optional",
+      "locked_start_at": null,
+      "reservation_confirmed": false
+    }
+  ],
+  "intent_confirmed": true
+}

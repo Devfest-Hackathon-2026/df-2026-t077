@@ -1,0 +1,265 @@
+{
+  "items": [
+    {
+      "id": "demo-origin",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空起終点",
+      "name_en": "Demo Start / finish",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.18,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 0,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-museum",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空資料館",
+      "name_en": "Demo Museum",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.181,
+        "lng": 136.9
+      },
+      "tags": [
+        "history"
+      ],
+      "stay_seconds": 1800,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-cafe",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空カフェ",
+      "name_en": "Demo Cafe",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.182,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 1200,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-garden",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空庭園",
+      "name_en": "Demo Garden",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.183,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 1200,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-art",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空工房",
+      "name_en": "Demo Studio",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.184,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 1200,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-park",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空公園",
+      "name_en": "Demo Park",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.185,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 1200,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-market",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空市場",
+      "name_en": "Demo Market",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.186,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 1200,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    },
+    {
+      "id": "demo-gallery",
+      "area_id": "demo-area",
+      "google_place_id": null,
+      "name_ja": "架空展示室",
+      "name_en": "Demo Gallery",
+      "description_ja": "実在しない開発用施設です。",
+      "description_en": "A synthetic development-only place.",
+      "visitor_info_ja": "料金・営業時間等は検証用の仮定です。",
+      "visitor_info_en": "Fees and hours are synthetic test assumptions.",
+      "reservation_required": false,
+      "location": {
+        "lat": 35.187,
+        "lng": 136.9
+      },
+      "tags": [
+        "quiet"
+      ],
+      "stay_seconds": 1200,
+      "opening_status": "verified",
+      "opening_windows": [
+        {
+          "opens_at": "2026-11-05T09:00:00+09:00",
+          "closes_at": "2026-11-05T18:00:00+09:00"
+        }
+      ],
+      "evidence_ids": [
+        "demo-evidence"
+      ],
+      "is_demo": true
+    }
+  ],
+  "evidence": [
+    {
+      "id": "demo-evidence",
+      "source_kind": "demo",
+      "provider": "team-synthetic-fixture",
+      "title": "Synthetic development sample",
+      "source_url": null,
+      "checked_at": "2026-11-05T09:00:00+09:00",
+      "confidence": "unknown",
+      "is_demo": true,
+      "note": "Places, coordinates, routes and hours are synthetic. Do not use for travel."
+    }
+  ]
+}

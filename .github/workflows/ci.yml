@@ -1,0 +1,41 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  foundation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24.22.2
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: 3.13.5
+      - run: npm install --global npm@11.19.1
+      - run: npm ci --prefix frontend --no-audit
+      - run: python -m pip install uv==0.13.7
+      - run: uv sync --frozen --project backend --python 3.13.5
+      - run: npm run test:setup
+      - run: npm run verify:foundation
+      - name: Install browser for labelled mock E2E
+        working-directory: frontend
+        run: npm exec -- playwright install --with-deps chromium
+      - name: Run browser E2E (fixed development samples, no paid APIs)
+        run: npm run test:e2e --prefix frontend
+      - name: Check Maps failure fallback (blocked script, no paid API)
+        run: npm run test:maps --prefix frontend

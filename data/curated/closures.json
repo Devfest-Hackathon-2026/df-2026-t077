@@ -1,0 +1,10 @@
+{
+  "note": "Regular closures for data/curated/spots.json. spots.json holds one reference day (regular weekday hours, 2026-11-05); the server copies those hours onto the requested date and marks a spot closed on the days below. Values come from each spot's team-confirmed visitor_info (2026-11-09). Holiday exceptions and one-off closures are not modelled here and stay in visitor_info.",
+  "weekly": {
+    "yamamotoya-honke": ["tue", "wed"],
+    "atsuta-horaiken-matsuzakaya": ["tue"]
+  },
+  "annual": {
+    "nagoya-castle": [{"from": "12-29", "to": "01-01"}]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "draft": {
+    "interests": null,
+    "requested_stops": [],
+    "max_walk_meters": null,
+    "end_at": null,
+    "avoid_windows": [],
+    "wait_assumptions": [],
+    "field_notes": []
+  },
+  "unresolved": [
+    {
+      "field": "requested_stops",
+      "question": "固定した希望と異なるため確認してください。",
+      "source_quote": "変更不可 / fixed"
+    }
+  ],
+  "warnings": [],
+  "generation_mode": "template",
+  "requires_confirmation": true
+}

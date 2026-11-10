@@ -1,0 +1,813 @@
+{
+ "provider": "google_maps_routes",
+ "travel_mode": "WALK",
+ "retrieved_at": "2026-11-09T01:43:21+09:00",
+ "source_kind": "estimated",
+ "usage": "hackathon demo only; delete after the event",
+ "attribution": "Google Maps",
+ "evidence": {
+  "id": "route-google-maps-20261109",
+  "source_kind": "estimated",
+  "provider": "Google Maps Platform Routes API",
+  "title": "Walking route estimate / 徒歩経路の推定",
+  "source_url": "https://developers.google.com/maps/documentation/routes",
+  "checked_at": "2026-11-09T01:43:21+09:00",
+  "confidence": "medium",
+  "is_demo": false,
+  "note": "Google Maps walking estimate between entrance points. Not a measured time."
+ },
+ "pairs": [
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 1020,
+   "distance_meters": 1287
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 2636,
+   "distance_meters": 3017
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 2834,
+   "distance_meters": 3242
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 2460,
+   "distance_meters": 2844
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 2716,
+   "distance_meters": 3136
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 2394,
+   "distance_meters": 2766
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 2832,
+   "distance_meters": 3239
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 2724,
+   "distance_meters": 3113
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 2005,
+   "distance_meters": 2337
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 1903,
+   "distance_meters": 2222
+  },
+  {
+   "from_spot_id": "nagoya-castle",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 2088,
+   "distance_meters": 2416
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 1071,
+   "distance_meters": 1287
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 3450,
+   "distance_meters": 4019
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 3147,
+   "distance_meters": 3640
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 2594,
+   "distance_meters": 2966
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 2850,
+   "distance_meters": 3258
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 2527,
+   "distance_meters": 2887
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 3145,
+   "distance_meters": 3640
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 3253,
+   "distance_meters": 3775
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 2139,
+   "distance_meters": 2459
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 2037,
+   "distance_meters": 2344
+  },
+  {
+   "from_spot_id": "meijo-park",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 2222,
+   "distance_meters": 2538
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2634,
+   "distance_meters": 3017
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 3420,
+   "distance_meters": 4015
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 489,
+   "distance_meters": 582
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 1131,
+   "distance_meters": 1319
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 821,
+   "distance_meters": 962
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 1202,
+   "distance_meters": 1406
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 487,
+   "distance_meters": 579
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 286,
+   "distance_meters": 339
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 1840,
+   "distance_meters": 2101
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 1463,
+   "distance_meters": 1698
+  },
+  {
+   "from_spot_id": "osu-kannon",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 1685,
+   "distance_meters": 1921
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2824,
+   "distance_meters": 3242
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 3110,
+   "distance_meters": 3640
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 485,
+   "distance_meters": 582
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 711,
+   "distance_meters": 816
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 360,
+   "distance_meters": 415
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 803,
+   "distance_meters": 930
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 22,
+   "distance_meters": 25
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 195,
+   "distance_meters": 237
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 1457,
+   "distance_meters": 1655
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 1183,
+   "distance_meters": 1381
+  },
+  {
+   "from_spot_id": "banshoji",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 1302,
+   "distance_meters": 1475
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2471,
+   "distance_meters": 2844
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 2554,
+   "distance_meters": 2966
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 1122,
+   "distance_meters": 1318
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 708,
+   "distance_meters": 816
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 352,
+   "distance_meters": 411
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 144,
+   "distance_meters": 174
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 707,
+   "distance_meters": 817
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 915,
+   "distance_meters": 1070
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 752,
+   "distance_meters": 843
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 628,
+   "distance_meters": 708
+  },
+  {
+   "from_spot_id": "atsuta-horaiken-matsuzakaya",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 597,
+   "distance_meters": 662
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2706,
+   "distance_meters": 3104
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 2812,
+   "distance_meters": 3258
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 813,
+   "distance_meters": 962
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 362,
+   "distance_meters": 415
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 354,
+   "distance_meters": 411
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 447,
+   "distance_meters": 527
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 359,
+   "distance_meters": 416
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 553,
+   "distance_meters": 649
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 1104,
+   "distance_meters": 1252
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 886,
+   "distance_meters": 999
+  },
+  {
+   "from_spot_id": "yabaton-yabacho",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 948,
+   "distance_meters": 1072
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2407,
+   "distance_meters": 2765
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 2490,
+   "distance_meters": 2887
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 1191,
+   "distance_meters": 1406
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 802,
+   "distance_meters": 930
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 142,
+   "distance_meters": 174
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 448,
+   "distance_meters": 527
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 801,
+   "distance_meters": 931
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 972,
+   "distance_meters": 1146
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 657,
+   "distance_meters": 725
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 564,
+   "distance_meters": 629
+  },
+  {
+   "from_spot_id": "yamamotoya-honke",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 501,
+   "distance_meters": 545
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2821,
+   "distance_meters": 3239
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 3108,
+   "distance_meters": 3640
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 483,
+   "distance_meters": 580
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 22,
+   "distance_meters": 25
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 710,
+   "distance_meters": 817
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 360,
+   "distance_meters": 416
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 801,
+   "distance_meters": 931
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 195,
+   "distance_meters": 234
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 1456,
+   "distance_meters": 1656
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 1182,
+   "distance_meters": 1382
+  },
+  {
+   "from_spot_id": "compal-osu",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 1300,
+   "distance_meters": 1476
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2720,
+   "distance_meters": 3113
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 3222,
+   "distance_meters": 3767
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 285,
+   "distance_meters": 339
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 201,
+   "distance_meters": 237
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 922,
+   "distance_meters": 1070
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 560,
+   "distance_meters": 649
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 981,
+   "distance_meters": 1146
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 201,
+   "distance_meters": 234
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 1619,
+   "distance_meters": 1842
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 1242,
+   "distance_meters": 1439
+  },
+  {
+   "from_spot_id": "osu-shopping-street",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 1464,
+   "distance_meters": 1662
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2020,
+   "distance_meters": 2337
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 2064,
+   "distance_meters": 2406
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 1819,
+   "distance_meters": 2101
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 1451,
+   "distance_meters": 1655
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 758,
+   "distance_meters": 856
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 1097,
+   "distance_meters": 1251
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 650,
+   "distance_meters": 725
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 1449,
+   "distance_meters": 1656
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 1600,
+   "distance_meters": 1842
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 382,
+   "distance_meters": 402
+  },
+  {
+   "from_spot_id": "oasis21",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 242,
+   "distance_meters": 264
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 1912,
+   "distance_meters": 2222
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 1996,
+   "distance_meters": 2344
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 1448,
+   "distance_meters": 1698
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 1179,
+   "distance_meters": 1381
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 626,
+   "distance_meters": 708
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 881,
+   "distance_meters": 999
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 560,
+   "distance_meters": 629
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 1177,
+   "distance_meters": 1382
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 1229,
+   "distance_meters": 1439
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 383,
+   "distance_meters": 402
+  },
+  {
+   "from_spot_id": "sunshine-sakae",
+   "to_spot_id": "sakae-station",
+   "duration_seconds": 254,
+   "distance_meters": 280
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "nagoya-castle",
+   "duration_seconds": 2098,
+   "distance_meters": 2416
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "meijo-park",
+   "duration_seconds": 2181,
+   "distance_meters": 2538
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "osu-kannon",
+   "duration_seconds": 1667,
+   "distance_meters": 1921
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "banshoji",
+   "duration_seconds": 1298,
+   "distance_meters": 1475
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "atsuta-horaiken-matsuzakaya",
+   "duration_seconds": 606,
+   "distance_meters": 676
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "yabaton-yabacho",
+   "duration_seconds": 931,
+   "distance_meters": 1087
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "yamamotoya-honke",
+   "duration_seconds": 498,
+   "distance_meters": 545
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "compal-osu",
+   "duration_seconds": 1297,
+   "distance_meters": 1476
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "osu-shopping-street",
+   "duration_seconds": 1448,
+   "distance_meters": 1662
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "oasis21",
+   "duration_seconds": 243,
+   "distance_meters": 264
+  },
+  {
+   "from_spot_id": "sakae-station",
+   "to_spot_id": "sunshine-sakae",
+   "duration_seconds": 255,
+   "distance_meters": 280
+  }
+ ]
+}

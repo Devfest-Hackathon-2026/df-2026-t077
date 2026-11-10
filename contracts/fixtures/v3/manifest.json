@@ -1,0 +1,102 @@
+[
+  {
+    "file": "spots.ja.json",
+    "model": "SpotListResponse"
+  },
+  {
+    "file": "trip.ja.json",
+    "model": "TripResponse"
+  },
+  {
+    "file": "proposal-normal.ja.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-time_shift.ja.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-place_shift.ja.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-unknown.ja.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-partial.ja.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-no_feasible.ja.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "intent-ambiguous.ja.json",
+    "model": "IntentDraftResponse"
+  },
+  {
+    "file": "intent-conflict.ja.json",
+    "model": "IntentDraftResponse"
+  },
+  {
+    "file": "selection.ja.json",
+    "model": "SelectionResponse"
+  },
+  {
+    "file": "spots.en.json",
+    "model": "SpotListResponse"
+  },
+  {
+    "file": "trip.en.json",
+    "model": "TripResponse"
+  },
+  {
+    "file": "proposal-normal.en.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-time_shift.en.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-place_shift.en.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-unknown.en.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-partial.en.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "proposal-no_feasible.en.json",
+    "model": "ProposalBundle"
+  },
+  {
+    "file": "intent-ambiguous.en.json",
+    "model": "IntentDraftResponse"
+  },
+  {
+    "file": "intent-conflict.en.json",
+    "model": "IntentDraftResponse"
+  },
+  {
+    "file": "selection.en.json",
+    "model": "SelectionResponse"
+  },
+  {
+    "file": "trip-create.request.json",
+    "model": "TripCreateRequest"
+  },
+  {
+    "file": "conflict.response.json",
+    "model": "ErrorResponse"
+  },
+  {
+    "file": "intent.request.json",
+    "model": "IntentInterpretRequest"
+  }
+]

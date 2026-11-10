@@ -1,0 +1,12 @@
+{
+  "client_request_id": "00000000-0000-4000-8000-000000000001",
+  "area_id": "demo-area",
+  "visit_date": "2026-11-05",
+  "locale": "ja",
+  "text": "あまり歩きたくない",
+  "current_input": {
+    "constraints": {
+      "max_walk_meters": 3000
+    }
+  }
+}
